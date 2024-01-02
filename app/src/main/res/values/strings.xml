@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">My Note App</string>
+    <string name="online_users">Online Users</string>
+    <string name="hey_text">Hey! how is it going?</string>
+    <string name="messages">Messages</string>
+    <string name="search">Search</string>
+    <string name="p11_kriss">Kriss</string>
+    <string name="p12_eugenia">Eugenia</string>
+    <string name="pi1_Laura">Laura</string>
+    <string name="pi9_clara">Clara</string>
+    <string name="aimah">Aimah</string>
+    <string name="pi10_Beverly">Beverly</string>
+    <string name="pi3_jane_gibson">Jane Gibson</string>
+    <string name="pi4_karla_harry">Karla Harry</string>
+    <string name="pi5_Danny_Rice">Danny Rice</string>
+    <string name="pi6_sean_potter">Sean potter</string>
+    <string name="pi7_bet_schwartz">Bet Schwartz</string>
+    <string name="pi8_rachel_frazier">Rachel Frazier</string>
 </resources>
