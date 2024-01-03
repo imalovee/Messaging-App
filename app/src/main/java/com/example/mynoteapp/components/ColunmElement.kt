@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.paddingFromBaseline
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
@@ -88,11 +89,12 @@ fun ColounmElement(
 @Composable
 fun ColumnElementColumn(modifier: Modifier){
     LazyColumn(verticalArrangement = Arrangement.spacedBy(8.dp),
-        contentPadding = PaddingValues(vertical = 14.dp)
+        contentPadding = PaddingValues(vertical = 14.dp),
+        modifier = modifier.fillMaxWidth().wrapContentHeight()
     ){
-       items(colunmData) {
-           item -> ColounmElement(item.drawable , item.text  )
-       }
+        items(colunmData) {
+                item -> ColounmElement(item.drawable , item.text  )
+        }
     }
 }
 //@Preview(showBackground = true)
