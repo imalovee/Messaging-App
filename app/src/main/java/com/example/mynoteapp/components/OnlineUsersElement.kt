@@ -7,8 +7,10 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.paddingFromBaseline
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
@@ -36,10 +38,10 @@ fun OnlineUsersElement(
             painter = painterResource(drawable),
             contentDescription = null,
             contentScale = ContentScale.Crop,
-           modifier = Modifier
-               .clip(CircleShape)
-               .size(80.dp)
-               .border(1.5.dp, MaterialTheme.colorScheme.secondary, CircleShape)
+            modifier = Modifier
+                .clip(CircleShape)
+                .size(80.dp)
+                .border(1.5.dp, MaterialTheme.colorScheme.secondary, CircleShape)
         )
 
         Text(
@@ -54,14 +56,14 @@ fun OnlineUsersElement(
 @Composable
 fun OnlineUsersRow(modifier: Modifier)
 {
-   LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp),
-       contentPadding = PaddingValues(horizontal = 16.dp),
-       modifier = Modifier
-   ) {
+    LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp),
+        contentPadding = PaddingValues(horizontal = 16.dp),
+        modifier = Modifier
+    ) {
         items(onlineUsersData){item ->
             OnlineUsersElement(item.drawable, item.text)
         }
-   }
+    }
 }
 
 @Composable
@@ -69,7 +71,7 @@ fun OnlineUsersSection(@StringRes title: Int,
                        modifier: Modifier = Modifier,
                        content : @Composable () -> Unit
 ){
-    Column (modifier){
+    Column (modifier = modifier.fillMaxWidth().wrapContentHeight()){
         Text(text = stringResource(title), style = MaterialTheme.typography.bodyMedium)
         content()
     }
